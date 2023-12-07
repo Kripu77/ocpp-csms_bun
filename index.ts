@@ -18,8 +18,6 @@ Bun.serve({
       const id = ocppMessage[1];
       const actionType = ocppMessage[2];
 
-      ws.send(JSON.stringify([3, id, {}]));
-
       if (actionType === ActionType.BootNotification) {
         //send the Accepted response
         console.info(
