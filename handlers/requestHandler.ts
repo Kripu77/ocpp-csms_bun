@@ -1,6 +1,6 @@
 import { ActionType } from "../models/ActionType";
 import { ServerWebSocket } from "bun";
-import { generateRandomNumber } from "../utils";
+import { generateRandomNumber } from "../helpers/utils";
 import { OCPPType2Message } from "../models";
 
 function sendOcppResponse(
