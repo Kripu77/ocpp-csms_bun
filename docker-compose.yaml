@@ -1,0 +1,25 @@
+ version: '3.8'
+ services:
+  ocpp-csms-bun:
+   build: 
+    context: .
+    dockerfile: Dockerfile.local
+   container_name:  ocpp-csms-bun
+   ports: 
+    - '3001:3001'
+   volumes:
+    - ./ocpp-csms-bun:/usr/src/app
+    - /usr/src/app/node_modules
+   environment:
+    REDIS_PORT: 6379
+    REDIS_PASSWORD: "superedis"
+    REDIS_HOST: "redis_server"
+    MONGO_SECRET_URL: "mongodb+srv://cp-simulator:cpsimulator@cluster0.9rarpuo.mongodb.net/test?retryWrites=true&w=majority"
+    MONGO: "development"
+    EXPRESS_PORT: 5001
+    PUBSUB_CREDENTIALS: "darn"
+    PUBSUB_CREDENTIALS_SECRET_URL: "hello"
+    NODE_ENV: "dev"
+    SERVICE_ENV: "ocpp"
+    SERVICE: "ocpp-server"
+    INFLUXDB_TOKEN: "sometoken" 
