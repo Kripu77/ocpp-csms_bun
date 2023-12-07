@@ -9,4 +9,5 @@ export enum ActionType {
   DiagnosticsStatusNotification = "DiagnosticsStatusNotification",
   FirmwareStatusNotification = "FirmwareStatusNotification",
   DataTransfer = "DataTransfer",
+  Unknown = "Unknown",
 }
