@@ -8,5 +8,5 @@
    ports: 
     - '3001:3001'
    volumes:
-    - ./ocpp-csms-bun:/
+    - ./ocpp-csms-bun:/usr/src/app
     - /node_modules

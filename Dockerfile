@@ -5,4 +5,4 @@ COPY . .
 RUN bun install typescript
 RUN bun run build
 EXPOSE 3001
-CMD [ "bun", "index.ts" ]
+CMD [ "bun", "start" ]
